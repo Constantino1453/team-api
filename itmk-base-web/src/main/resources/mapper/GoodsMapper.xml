@@ -1,0 +1,12 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itmk.web.goods.mapper.GoodsMapper">
+    <select id="getMyCollect" resultType="com.itmk.web.goods.entity.Goods">
+        select g.*,gc.collect_id from goods_collect as gc
+        left join goods as g
+        on g.goods_id = gc.goods_id
+        where gc.user_id =#{userId}
+    </select>
+</mapper>

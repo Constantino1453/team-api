@@ -1,6 +1,6 @@
 #端口号配置
 server:
-  port: 18089
+  port: 8089
 #数据库连接配置
 spring:
   datasource:
